@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <AssemblyName>AstcEncoderDll</AssemblyName>
+        <RootNamespace>AstcEncoderDll</RootNamespace>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+      <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <None Remove="lib\astcenc-avx2-shared.dll" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Include="lib\astcenc-avx2-shared.dll" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="SixLabors.ImageSharp" Version="3.1.6" />
+    </ItemGroup>
+
+</Project>
