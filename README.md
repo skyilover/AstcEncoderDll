@@ -19,6 +19,7 @@ ASTC Encoder는 ARM의 공식 ASTC 인코더(`astcenc`) 라이브러리를 활�
 1. **필수 구성 요소**
    - .NET 6 이상 설치
    - ARM의 [ASTC Encoder](https://github.com/ARM-software/astc-encoder) 빌드 후 `astcenc.dll` 생성 및 실행 디렉토리에 배치
+
    **astc-encoder 빌드 방법**
      1. 윈도우 빌드
      ```bash
