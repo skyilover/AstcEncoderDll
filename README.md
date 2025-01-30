@@ -19,7 +19,17 @@ ASTC Encoder는 ARM의 공식 ASTC 인코더(`astcenc`) 라이브러리를 활�
 1. **필수 구성 요소**
    - .NET 6 이상 설치
    - ARM의 [ASTC Encoder](https://github.com/ARM-software/astc-encoder) 빌드 후 `astcenc.dll` 생성 및 실행 디렉토리에 배치
-
+   **astc-encoder 빌드 방법**
+     1. 윈도우 빌드
+     ```bash
+     cmake -G "Visual Studio 17 2022" -T ClangCL -DCMAKE_BUILD_TYPE=Release -DASTCENC_SHAREDLIB=ON ..
+     cmake --build . --config Release
+     ```
+     2. 리눅스 빌드
+     ```bash
+     cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release -DASTCENC_ISA_AVX2=ON -DASTCENC_SHAREDLIB=ON ..
+     make -j$(nproc)
+     ```
 2. **프로젝트 클론**
 ```bash
 git clone https://github.com/<your-repo>/astc-image-encoder.git
